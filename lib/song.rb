@@ -40,5 +40,6 @@ class Song
        song = self.create_by_name(name)
     end
     song
+    puts @@all
    end
   end
