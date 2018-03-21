@@ -6,8 +6,9 @@ class Song
     @@all
   end
   
-  def initialize(name = nil)
+  def initialize(name = nil, artist_name = nil)
     @name = name
+    @artist_name = artist_name
   end
   
   def save
@@ -47,8 +48,8 @@ class Song
   end
   
   def self.new_from_filename(file_name)
-    file_arr = file_name.split("-")
-    
+    file_arr = file_name.chomp(".mp3").split("-")
+    new_song = self.new(file_arr[1],file_arr[0])
     
   end
 end
