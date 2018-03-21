@@ -52,4 +52,6 @@ class Song
     new_song = self.new(file_arr[1].strip,file_arr[0].strip)
     
   end
+  
+  def self.create_from_filename()
 end
